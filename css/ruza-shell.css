@@ -1,0 +1,24 @@
+/* isolated shell */
+html.theme-neon{--ruza-bg:#0b0f14;--ruza-panel:#101720;--ruza-text:#e6f1ff;--ruza-muted:#94a3b8;--ruza-accent:#00e0ff;--ruza-border:#1f2a3a;}
+html.theme-gradient{--ruza-bg:linear-gradient(180deg,#f5f7ff 0%,#eef4ff 40%,#f9fbff 100%);--ruza-panel:#ffffff;--ruza-text:#0f172a;--ruza-muted:#475569;--ruza-accent:#6366f1;--ruza-border:#d6e0ff;}
+html.theme-black{--ruza-bg:#000;--ruza-panel:#0b0b0b;--ruza-text:#f1f5f9;--ruza-muted:#94a3b8;--ruza-accent:#ffffff;--ruza-border:#1f2a3a;}
+/* Do not override user's body styles, only our elements */
+.ruza-topbar{position:sticky;top:0;z-index:9999;display:flex;gap:12px;align-items:center;padding:10px 14px;background:var(--ruza-panel);color:var(--ruza-text);border-bottom:1px solid var(--ruza-border)}
+.ruza-brand{display:flex;align-items:center;gap:10px;background:none;border:none;color:inherit;cursor:pointer}
+.ruza-brand img{width:28px;height:28px;border-radius:6px;object-fit:contain;background:#000}
+.ruza-title{font-weight:700}
+.ruza-hamb{width:36px;height:32px;border:none;background:transparent;cursor:pointer;display:grid;align-items:center}
+.ruza-hamb span{display:block;height:3px;background:var(--ruza-text);border-radius:2px}
+.ruza-hamb span:nth-child(1){width:22px}.ruza-hamb span:nth-child(2){width:18px}.ruza-hamb span:nth-child(3){width:24px}
+.ruza-drawer{position:fixed;left:0;top:0;height:100vh;width:300px;transform:translateX(-100%);transition:.22s transform;background:var(--ruza-panel);color:var(--ruza-text);z-index:9998;border-right:1px solid var(--ruza-border);box-shadow:2px 0 16px rgba(0,0,0,.35);overflow:auto}
+.ruza-drawer.open{transform:translateX(0)}
+.ruza-drawer-head{display:flex;gap:10px;align-items:center;padding:14px;border-bottom:1px solid var(--ruza-border);position:sticky;top:0;background:var(--ruza-panel)}
+.ruza-nav{display:flex;flex-direction:column;padding:10px;min-height:calc(100% - 60px)}
+.ruza-item{background:transparent;border:1px solid var(--ruza-border);margin:6px 0;border-radius:12px;padding:12px;color:inherit;text-align:left;cursor:pointer}
+.ruza-nav .spacer{flex:1}
+.ruza-scrim{position:fixed;inset:0;background:rgba(0,0,0,0);pointer-events:none;z-index:9997}
+.ruza-scrim.show{background:rgba(0,0,0,.35);pointer-events:auto}
+html.ruza-lock,body.ruza-lock{overflow:hidden}
+/* Settings card */
+#ruza-settings.card{background:var(--ruza-panel);border:1px solid var(--ruza-border);border-radius:16px;padding:16px;margin:12px 0;color:var(--ruza-text)}
+#ruza-settings .row{display:flex;gap:10px;align-items:center}
